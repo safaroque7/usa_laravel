@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.formInput {
+  @apply mb-5 border border-gray-300 w-full p-2;
+}
