@@ -20,7 +20,7 @@
                     <tr class="flex justify-center items-center border-b pb-2 last:border-b-0">
                         <td class="p-2 w-1/12 text-left">{{ $client->id }} </td>
                         <td class="p-2 w-1/12"> 
-                            <img src="images/{{ ($client->image) }}" alt="{{ $client->name }}" class="h-auto w-8 rounded-sm">
+                            <img src="images/{{$client->image}}" alt="{{ $client->name }}" onerror="this.onerror=null;this.src='images/default.png'" class="h-auto w-8 rounded-sm" />
                         </td>
                         <td class="p-2 w-2/12"> {{ $client->name }} </td>
                         <td class="p-2 w-2/12"> {{ $client->phone }} </td>

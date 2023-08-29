@@ -20,7 +20,7 @@ class ClientController extends Controller
 
         $clients = new Client();
 
-        $imageName = time() . '.' . $request->image->extension();
+        $imageName = time(). '.' . $request->image->extension();
         $request->image->move(public_path('images'), $imageName);
 
         if($request->hasFile("image")){
@@ -28,12 +28,13 @@ class ClientController extends Controller
             foreach($files as $file){
                 $imageName = time().'_'.$file->getClientOriginalName();
                 $request['client_id'] = $client->id;
-                $request['image'] = $imageName;
+                $request['image']= $imageName;
                 $file->move(\public_path("/images"), $imageName);
                 image::create($request->all());
             }
         }
 
+        
         $clients->name = $request->name;
         $clients->image = $imageName;
         $clients->phone = $request->phone;
