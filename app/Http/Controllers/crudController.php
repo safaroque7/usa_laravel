@@ -63,6 +63,7 @@ class crudController extends Controller
      */
     public function show($id, FlasherInterface $flasher)
     {
+        $clients = Client::all();
         $client = Client::find($id);
 
         if (empty($client)) {
@@ -72,8 +73,11 @@ class crudController extends Controller
 
         return view('layouts.view', [
             'faroque' => $client,
+            'kamals' => $clients,
+
         ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.

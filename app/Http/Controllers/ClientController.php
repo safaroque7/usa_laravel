@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Client;
 use Flasher\Prime\FlasherInterface;
 
+
 class ClientController extends Controller
 {
     public function addClintMethod(Request $request, FlasherInterface $flasher)
@@ -19,6 +20,9 @@ class ClientController extends Controller
         ]);
 
         $clients = new Client();
+        $clients = Client::latest()->paginate(2);
+        
+        // dd($clients);
 
         $imageName = time(). '.' . $request->image->extension();
         $request->image->move(public_path('images'), $imageName);

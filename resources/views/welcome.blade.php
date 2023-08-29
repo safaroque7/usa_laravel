@@ -47,8 +47,10 @@
                         </td>
                     </tr>
                 @endforeach
-
             </tbody>
+            <div class="flex">
+                {{-- {{ $kamals->links() }} --}}
+            </div>
         </table>
     </div>
 @endsection
