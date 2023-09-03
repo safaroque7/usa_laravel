@@ -20,7 +20,6 @@ class ClientController extends Controller
         ]);
 
         $clients = new Client();
-        $clients = Client::latest()->paginate(2);
         
         // dd($clients);
 

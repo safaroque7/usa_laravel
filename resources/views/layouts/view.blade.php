@@ -6,15 +6,21 @@
             <h2 class="font-bold border-b mb-3"> Profile </h2>
             <div class="w-full mb-5">
 
-                <img src="{{asset('images/default.png')}}" alt="{{ $faroque->name }}"
-                    onerror="this.onerror=null;this.src='images/default.png'" class="h-auto w-auto rounded-sm mb-4" />
+                <img src="/images/{{ $faroque->image }}" alt="{{ $faroque->name }}"
+                    onerror="this.onerror=null;this.src='/images/default.png'" class="h-auto w-auto rounded-sm" />
+
+                <h2 class="mb-4"> <span class="last:border-b-2 border-b block font-semibold"> ID </span>
+                    {{ $faroque->id }} </h2>
 
                 <h2 class="mb-4"> <span class="last:border-b-2 border-b block font-semibold"> Name </span>
-                    {{ $faroque->name }} </h2>
+                    {{ $faroque->name }}
+                </h2>
                 <h2 class="mb-4"> <span class="last:border-b-2 border-b block font-semibold"> Phone </span>
-                    <a href="tel:{{ $faroque->phone }}" class="hover:underline"> {{ $faroque->phone }} </a> </h2>
+                    <a href="tel:{{ $faroque->phone }}" class="hover:underline"> {{ $faroque->phone }} </a>
+                </h2>
                 <h2 class="mb-4"> <span class="last:border-b-2 border-b block font-semibold"> Email </span>
-                    <a href="mailto:{{ $faroque->email}}" class="hover:underline"> {{ $faroque->email }} </a> </h2>
+                    <a href="mailto:{{ $faroque->email }}" class="hover:underline"> {{ $faroque->email }} </a>
+                </h2>
                 <h2 class="mb-4"> <span class="last:border-b-2 border-b block font-semibold"> Address </span>
                     {{ $faroque->address }}
                 </h2>
@@ -103,7 +109,8 @@
                                 <td class="text-center"> 1 </td>
                                 <td class="text-right"> 1450.00 </td>
                                 <td class="text-right"> 1450.00 </td>
-                            </tr><tr class="border-b block-inline mb-5 py-5">
+                            </tr>
+                            <tr class="border-b block-inline mb-5 py-5">
                                 <td> 1 </td>
                                 <td class="text-center"> Domain </td>
                                 <td class="text-center"> Yearly </td>
@@ -119,7 +126,7 @@
                                 <td class="text-right"> 1450.00 </td>
                                 <td class="text-right"> 1450.00 </td>
                             </tr>
-                            
+
                             <tr>
                                 <td> </td>
                                 <td> </td>

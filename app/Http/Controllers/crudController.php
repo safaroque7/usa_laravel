@@ -63,8 +63,9 @@ class crudController extends Controller
      */
     public function show($id, FlasherInterface $flasher)
     {
-        $clients = Client::all();
         $client = Client::find($id);
+
+        // dd($client);
 
         if (empty($client)) {
             $flasher->addError('Post not found');
@@ -73,8 +74,6 @@ class crudController extends Controller
 
         return view('layouts.view', [
             'faroque' => $client,
-            'kamals' => $clients,
-
         ]);
     }
 
@@ -139,5 +138,9 @@ class crudController extends Controller
 
         $flasher->addSuccess('Your post has been deleted successfully.');
         return redirect()->route('welcome');
+    }
+
+    public function back(){
+        return redirect()->route('back');
     }
 }

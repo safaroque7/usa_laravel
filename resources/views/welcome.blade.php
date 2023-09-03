@@ -35,8 +35,7 @@
 
                                 <form action="{{ route('deleteRouter', $client->id) }}" method="post">
                                     @csrf
-                                    <button type="submit  "
-                                        class="bg-red-500 text-2xs px-3 py-1 text-white mr-2 cursor-pointer hover:bg-red-800 duration-500">
+                                    <button type="submit" onclick= "return confirm( 'Are you sure to delte it?')"                                        class="bg-red-500 text-2xs px-3 py-1 text-white mr-2 cursor-pointer hover:bg-red-800 duration-500">
                                         Delete </button>
                                 </form>
 

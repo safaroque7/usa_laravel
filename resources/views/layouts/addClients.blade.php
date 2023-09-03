@@ -61,8 +61,10 @@
 
             <input type="submit" value="Submit"
                 class="rounded-none bg-gray-500 px-3 py-2 block-inline text-white cursor-pointer bg-green-500 hover:bg-green-800 duration-500">
-            <input type="submit" value="Cancel"
+
+            <input type="reset" value="Cancel"
                 class="rounded-none bg-gray-500 px-3 py-2 block-inline text-white cursor-pointer bg-red-500 hover:bg-red-800 duration-500">
+
         </form>
     </div>
 @endsection
